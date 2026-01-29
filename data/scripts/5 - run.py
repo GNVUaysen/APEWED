@@ -11,7 +11,7 @@ FEATURES = ["PM25", "wind", "temp", "hum"]
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--model", required=True, help="Path al .joblib guardado por model.py (p.ej., models/best_48h.joblib)")
+    ap.add_argument("--model", required=True, help="Path al .joblib ")
     ap.add_argument("--input_csv", required=True, help="CSV with columns MP25, wind, temp, hum")
     ap.add_argument("--out_json", default="", help="output path for JSON")
     args = ap.parse_args()
