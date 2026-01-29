@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+
 
 from __future__ import annotations
 
@@ -191,7 +190,6 @@ def apply_condition_filter(df: pd.DataFrame, mode: str) -> pd.DataFrame:
 def candidate_models(random_state: int, pos_weight: float):
     models = []
 
-    # Interpretable baselines
     models.append(("LogisticRegression", "class_weight=balanced",
                    LogisticRegression(max_iter=3000, class_weight="balanced", solver="lbfgs")))
 
@@ -392,7 +390,7 @@ def train_one_horizon(
             best_pipe = pipe
 
     if best is None:
-        raise RuntimeError(f"No se pudo entrenar ningún modelo en {horizon}h (cond={condition_mode}).")
+        raise RuntimeError(f"Not found {horizon}h (cond={condition_mode}).")
 
     # preds del mejor
     X_test = test_df[feature_cols]
@@ -410,10 +408,7 @@ def train_one_horizon(
 
 
 def make_table1(df_metrics: pd.DataFrame, prefer_horizon=48, topk=1):
-    """
-    Table 1: por horizonte, seleccionar el mejor modelo según ROC-AUC (y desempate por recall).
-    topk=1 -> solo mejor; topk>1 -> top-k por horizonte.
-    """
+
     out = []
     for h in sorted(df_metrics["horizon"].unique()):
         dh = df_metrics[df_metrics["horizon"] == h].copy()
@@ -503,7 +498,7 @@ def main():
             condition_mode=args.condition_mode
         )
 
-        # guardar mejor modelo por horizonte
+    
         model_out = models_dir / f"best_{h}h{suffix}.joblib"
         dump({
             "model": best_pipe,
@@ -527,23 +522,21 @@ def main():
     df_all = pd.DataFrame(all_metrics_rows)
     df_best = pd.DataFrame(best_rows)
 
-    # Export métricas completas y mejores
     metrics_all_out = reports_dir / f"metrics_all_models{suffix}.csv"
     metrics_best_out = reports_dir / f"metrics_best_by_horizon{suffix}.csv"
     df_all.to_csv(metrics_all_out, index=False)
     df_best.to_csv(metrics_best_out, index=False)
 
-    # Construir Table 1 (mejor por horizonte o top-k)
     table1 = make_table1(df_all, topk=args.topk)
     table1_out = reports_dir / f"table1_models_by_horizon_top{args.topk}{suffix}.csv"
     table1.to_csv(table1_out, index=False)
 
-    # Extra: top modelos 48h (para robustez narrativa)
+
     top48 = df_all[df_all["horizon"] == 48].sort_values(["roc_auc", "recall"], ascending=False)
     top48_out = reports_dir / f"table1_top_models_48h{suffix}.csv"
     top48.head(15).to_csv(top48_out, index=False)
 
-    print("✅ Listo.")
+
     print("All models:", metrics_all_out)
     print("Best per horizon:", metrics_best_out)
     print("Table 1:", table1_out)
