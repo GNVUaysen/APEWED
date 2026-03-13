@@ -1,0 +1,2 @@
+Comparison,Mean difference RESP_TOTAL,Bootstrap 95% CI low,Bootstrap 95% CI high,Permutation p-value,N days used
+Winter (Apr-Sep) vs non-winter excluding cluster and post-cluster days,8.832579465124333,6.353769293512356,11.296473669750583,0.0001999600079984003,2942

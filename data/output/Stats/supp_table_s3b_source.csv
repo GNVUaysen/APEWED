@@ -1,0 +1,2 @@
+Comparison,Mean difference RESP_TOTAL,RESP_TOTAL bootstrap 95% CI low,RESP_TOTAL bootstrap 95% CI high,RESP_TOTAL permutation p-value,Mean difference respiratory share,Respiratory share bootstrap 95% CI low,Respiratory share bootstrap 95% CI high,Respiratory share permutation p-value
+Winter (Apr-Sep) vs non-winter,10.49785984848485,8.220782160547783,12.79385485868298,0.0001999600079984003,,,,0.0001999600079984003
