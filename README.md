@@ -9,7 +9,7 @@ This repository contains the code and aggregated datasets supporting the study
 - Reproducible analysis pipeline
 
 ## Data availability
-Air quality and meteorological data are publicly available from the Chilean National Air Quality Information System (SINCA; https://sinca.mma.gob.cl/index.php/redes). All emergency healthcare data are aggregated were extracted from Chilean Department of Health Statistics and Information (DEIS; https://deis.minsal.cl), Ministry of Health. 
+Air quality and meteorological data are publicly available from the Chilean National Air Quality Information System (SINCA; https://sinca.mma.gob.cl/index.php/redes). All emergency healthcare data are aggregated were extracted from Chilean Department of Health Statistics and Information (DEIS; deis.minsal.cl), Ministry of Health. 
 
 ## Code availability
 All analysis scripts were developed in Python and are provided in this repository.
