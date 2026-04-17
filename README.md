@@ -1,7 +1,7 @@
 # APEWED – Air Pollution Early Warning of Emergency Demand
 
 This repository contains the code and aggregated datasets supporting the study
-"AI-based early warning model for respiratory emergency demand driven by air pollution and meteorological conditions", submitted to *npj Digital Public Health*.
+"AI-based early warning model for respiratory emergency demand driven by air pollution and meteorological conditions", submitted to *Urban Climate*.
 
 ## Contents
 - Python scripts for data preprocessing, statistical analysis, and machine learning
