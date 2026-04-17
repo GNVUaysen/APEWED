@@ -1,8 +1,0 @@
-Maximum severity,Cluster duration,Number of clusters,Mean cumulative excess respiratory visits (lag 1-6),Median cumulative excess respiratory visits (lag 1-6),IQR cumulative excess respiratory visits (lag 1-6),Mean peak excess respiratory visits,Mean lag of peak excess
-Emergency,2 days,10,30.6,47.5,-44.0 to 114.75,22.166666666666664,4.3
-Emergency,3 days,11,21.27272727272728,30.00000000000003,7.0 to 60.5,19.515151515151516,2.909090909090909
-Emergency,4 days,2,-24.5,-24.5,-33.75 to -15.25,5.5,2.5
-Emergency,5+ days,4,31.999999999999986,31.999999999999986,-22.75 to 86.75,24.416666666666664,3.5
-Pre-emergency,2 days,17,6.058823529411762,-23.000000000000014,-51.0 to 66.0,22.529411764705884,3.9411764705882355
-Pre-emergency,3 days,5,-82.60000000000002,-104.00000000000003,-141.0 to -7.0,-3.2666666666666693,3.4
-Pre-emergency,4 days,4,-2.4999999999999964,8.500000000000002,-11.75 to 17.75,8.25,2.25
