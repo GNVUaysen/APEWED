@@ -2,10 +2,10 @@
 """
 Modos de uso:
 1) Construcción completa desde archivos fuente:
-   python3 0-data-air.py --build-raw
+   python3 0-data-air_make_model.py --build-raw
 
 2) Solo modelado desde dataset_model_clean_raw.csv ya existente:
-   python3 0-data-air.py
+   python3 0-data-air_make_model.py
 """
 
 from pathlib import Path
