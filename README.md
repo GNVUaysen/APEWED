@@ -30,7 +30,7 @@ Main Python packages used in this project:
 - lightgbm (optional)
 
 ## Usage
-python3 predict_48h.py --input example_today.csv --model final_model_operational_48h.joblib
+python3 predict_48h.py --input example_predict.csv --model final_model_operational_48h.joblib
 
 ## Disclaimer
 This repository does not contain identifiable patient data.
