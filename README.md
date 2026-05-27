@@ -1,7 +1,7 @@
 # APEWED – Air Pollution Early Warning of Emergency Demand
 
 This repository contains the code and aggregated datasets supporting the study
-"EARLY WARNING OF CRITICAL AIR-POLLUTION EPISODES TO SUPPORT RESPIRATORY EMERGENCY PREPAREDNESS IN A REMOTE PATAGONIAN CITY"
+"An AI Early Warning Tool for Pollution-Driven Respiratory Emergency Demand in a Remote City"
 
 ## Contents
 - Python scripts for data preprocessing, statistical analysis, and machine learning
